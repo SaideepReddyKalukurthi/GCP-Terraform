@@ -13,4 +13,9 @@ variable "network-name" {
     default = [ "peering-01", "peering-02" ]
 }
 
+variable "subnets-region" {
+    type = list(string)
+    default = [ "" ] 
+}
+
 
