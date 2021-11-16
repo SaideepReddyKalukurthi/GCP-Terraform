@@ -21,3 +21,27 @@ module "vpc-1-subnets" {
         }
     ]
 }
+
+module "vpc-2-subnets" {
+    source  = "terraform-google-modules/network/google//modules/subnets"
+    version = "~> 3.0.0"
+
+    project_id   = var.project-id[1]
+    network_name = var.network-name[1]
+
+    subnets = [
+        {
+            subnet_name           = "subnet-01"
+            subnet_ip             = "10.10.30.0/24"
+            subnet_region         = var.subnets-region[2]
+        },
+        {
+            subnet_name           = "subnet-02"
+            subnet_ip             = "10.10.40.0/24"
+            subnet_region         = var.subnets-region[3]
+            subnet_private_access = "true"
+            subnet_flow_logs      = "true"
+            description           = "This subnet has a description"
+        }
+    ]
+}
