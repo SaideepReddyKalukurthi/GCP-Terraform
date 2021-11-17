@@ -8,8 +8,8 @@ steps:
   args:
     - '-c'
     - |
-         MODULE_SEQUENCE=("network/deploy"
-                          "service-account/deploy"
+         MODULE_SEQUENCE=("network"
+                          "service-account"
                          )
                          
          for i in "${MODULE_SEQUENCE[@]}"
