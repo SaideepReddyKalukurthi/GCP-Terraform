@@ -3,13 +3,13 @@
 # Usage : In this directory, run the following command to build
 # $ gcloud builds submit . --config=cloudbuild-module.yaml --substitutions=_MODULE_DIR_PATH="<module-dir-path>",_TERRAFORM_APPLY="<Y> or <N>",_ORGANIZATION_ID=<org_id>,_MASTER_BILLING_ACCOUNT=<master_billing_account>,_RETAIL_BILLING_ACCOUNT="<retail_billing_account>"
 steps:
-- name: hashicorp/terraform:0.12.8
+- name: hashicorp/terraform:latest
   dir: $_MODULE_DIR_PATH
   args: ['init', '-backend-config=bucket=${_BUCKET}']
-- name: hashicorp/terraform:0.12.8
+- name: hashicorp/terraform:latest
   dir: $_MODULE_DIR_PATH
   args: ['plan', '-out=tfplan']
-- name: hashicorp/terraform:0.12.8
+- name: hashicorp/terraform:latest
   entrypoint: 'sh'
   args: 
   - '-c'
