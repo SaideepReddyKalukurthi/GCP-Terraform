@@ -7,7 +7,8 @@ module "service_accounts" {
   prefix        = "demo-saideepreddy"
   names         = ["first"]
   project_roles = [
-    "${var.project_id}=>roles/compute.networkAdmin",
-    "${var.project_id}=>roles/storage.admin",
+#    "${var.project_id}=>roles/compute.networkAdmin",
+#    "${var.project_id}=>roles/storage.admin",
+    "${var.project_id}=>roles/iam.serviceAccountAdmin"
   ]
 }
