@@ -10,6 +10,7 @@ steps:
     - '-c'
     - |
          MODULE_SEQUENCE=("service-account"
+                          "network"
                          )
                          
          for i in "${MODULE_SEQUENCE[@]}"
