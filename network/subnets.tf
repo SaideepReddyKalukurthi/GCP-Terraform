@@ -44,4 +44,8 @@ module "vpc-2-subnets" {
             description           = "This subnet has a description"
         }
     ]
+
+    depends_on = [
+      module.vpc-2
+    ]
 }
