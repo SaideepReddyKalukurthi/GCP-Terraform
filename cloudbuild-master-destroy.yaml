@@ -15,3 +15,6 @@ steps:
          do
            gcloud builds submit . --config=cloudbuild-destroy.yaml --substitutions=_MODULE_DIR_PATH="${MODULE_SEQUENCE[i]}",_BUCKET="terraform-gcs-backend-state"
          done
+
+
+gcloud builds submit . --config=cloudbuild-destroy.yaml --substitutions=_MODULE_DIR_PATH="network",_BUCKET="terraform-gcs-backend-state"
