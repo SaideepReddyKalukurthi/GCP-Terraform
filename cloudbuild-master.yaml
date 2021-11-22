@@ -17,4 +17,4 @@
 #          done
 
 
-gcloud builds submit . --config=cloudbuild-module.yaml --substitutions=_MODULE_DIR_PATH='./service-account',_TERRAFORM_APPLY="Y",_BUCKET="terraform-gcs-backend-state"
+gcloud builds submit . --config=cloudbuild-module.yaml --substitutions=_MODULE_DIR_PATH="./service-account",_TERRAFORM_APPLY="Y",_BUCKET="terraform-gcs-backend-state"
