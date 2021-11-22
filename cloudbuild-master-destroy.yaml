@@ -8,7 +8,7 @@ steps:
   args:
     - '-c'
     - |
-         MODULE_SEQUENCE=("network/deploy"
+         MODULE_SEQUENCE=("network"
                           "service-account"
                          )
          for ((i=${#MODULE_SEQUENCE[@]}-1; i>=0; i--)); 
